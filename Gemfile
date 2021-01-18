@@ -8,3 +8,4 @@ ruby '2.7.0'
 
 # gem "rails"
 gem 'sinatra'
+gem 'shotgun'
