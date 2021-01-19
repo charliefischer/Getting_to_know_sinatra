@@ -9,3 +9,5 @@ ruby '2.6.5'
 # gem "rails"
 gem 'sinatra'
 gem 'shotgun'
+gem 'capybara' 
+gem 'selenium-webdriver'
