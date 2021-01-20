@@ -16,3 +16,13 @@ feature 'testing naming players' do
     expect(page).to have_content 'Glykeria vs. Oscar'
   end
 end
+
+feature 'testing hit points' do
+  scenario 'it allows the players to see the opponents hit points' do
+    visit('/')
+    fill_in(:player_1_name, with: 'Glykeria')
+    fill_in(:player_2_name, with: 'Oscar')
+    click_button('Submit')
+    expect(page).to have_content 'Oscar: 100HP'
+  end
+end
