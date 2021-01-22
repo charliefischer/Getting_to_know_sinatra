@@ -1,7 +1,7 @@
 require 'game'
 
 describe Game do
-  subject(:game) { described_class.new(oscar, glykeria)}
+  subject(:game) { described_class.new(oscar, glykeria) }
   subject(:oscar) { double :player }
   subject(:glykeria) { double :player }
 
@@ -25,5 +25,17 @@ describe Game do
     end
   end
 
+  describe '#current_turn' do
+    it 'strats as player 1' do
+      expect(game.current_turn).to eq oscar
+    end
+  end
+
+  describe '#switch_turns' do
+    it 'switches the turn' do
+      game.switch_turns
+      expect(game.current_turn).to eq glykeria
+    end
+  end
 
 end
