@@ -16,13 +16,6 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-   it 'damages the player' do
-    expect(oscar).to receive(:receive_damage)
-    glykeria.attack(oscar)
-   end
-  end
-
   describe '#receive_damage' do
     it 'reduces the player hit points' do
       expect { oscar.receive_damage }.to change { oscar.hit_points }.by(-10)
